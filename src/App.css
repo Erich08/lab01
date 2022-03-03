@@ -40,4 +40,10 @@
 img {
   width: 300px;
   height: 300px;
+  cursor: pointer;
+}
+
+.beastCards {
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
