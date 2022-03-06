@@ -13,6 +13,9 @@ class Hornedbeast extends React.Component {
     this.setState({
       favorites: this.state.favorites + 1,
     });
+    this.props.showBeast(this.props.title);
+    this.props.beastDescription(this.props.description);
+    this.props.beastImg(this.props.imgurl);
   };
 
   render() {
@@ -26,21 +29,11 @@ class Hornedbeast extends React.Component {
           />
           <Card.Body>
             <Card.Text> ❤️ {this.state.favorites} ❤️</Card.Text>
+            <Card.Text>{this.props.title}</Card.Text>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text>{this.props.button}</Card.Text>
           </Card.Body>
         </Card>
       </div>
-
-      //   <div>
-      //     <h2>{this.props.title}</h2>
-      //     <img
-      //       src={this.props.imgurl}
-      //       alt='Test'
-      //       title={this.props.description}
-      //     />
-      //     <p>{this.props.description}</p>
-      //   </div>
     );
   }
 }

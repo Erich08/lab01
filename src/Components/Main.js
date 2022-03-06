@@ -1,6 +1,5 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component {
   render() {
@@ -13,7 +12,9 @@ class Main extends React.Component {
             imgurl={hornedbeasts.image_url}
             description={hornedbeasts.description}
             favorites={hornedbeasts.favorites}
-            button={<Button onClick={this.props.test}>Click Me</Button>}
+            showBeast={this.props.showBeast}
+            beastDescription={this.props.beastDescription}
+            beastImg={this.props.beastImg}
           />
         ))}
       </div>
