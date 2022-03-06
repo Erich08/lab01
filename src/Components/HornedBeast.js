@@ -1,14 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import beastinfo from '../beastinfo';
 
 class Hornedbeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: this.props.title,
-      imgurl: this.props.imgurl,
-      description: this.props.description,
       favorites: 0,
     };
   }
@@ -21,18 +17,21 @@ class Hornedbeast extends React.Component {
 
   render() {
     return (
-      <Card className='beastCards' style={{ width: '18rem' }}>
-        <Card.Img
-          variant='top'
-          src={this.props.imgurl}
-          onClick={this.favorited}
-        />
-        <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text> ❤️ {this.state.favorites} ❤️</Card.Text>
-          <Card.Text>{this.props.description}</Card.Text>
-        </Card.Body>
-      </Card>
+      <div>
+        <Card className='beastCards' style={{ width: '18rem' }}>
+          <Card.Img
+            variant='top'
+            src={this.props.imgurl}
+            onClick={this.favorited}
+          />
+          <Card.Body>
+            <Card.Text> ❤️ {this.state.favorites} ❤️</Card.Text>
+            <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text>{this.props.button}</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
       //   <div>
       //     <h2>{this.props.title}</h2>
       //     <img

@@ -1,18 +1,19 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import beastinfo from '../beastinfo';
+import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component {
   render() {
     return (
-      <div>
-        {beastinfo.map((hornedbeasts) => (
+      <div className='flexbox-container'>
+        {this.props.info.map((hornedbeasts, ind) => (
           <HornedBeast
-            key={hornedbeasts.id}
+            key={ind}
             title={hornedbeasts.title}
             imgurl={hornedbeasts.image_url}
             description={hornedbeasts.description}
             favorites={hornedbeasts.favorites}
+            button={<Button onClick={this.props.test}>Click Me</Button>}
           />
         ))}
       </div>
