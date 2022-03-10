@@ -1,5 +1,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
+import FilteredBeast from './FilteredBeast';
+import json from './data.json';
 
 class Main extends React.Component {
   render() {
@@ -15,6 +17,7 @@ class Main extends React.Component {
             showBeast={this.props.showBeast}
             beastDescription={this.props.beastDescription}
             beastImg={this.props.beastImg}
+            horns={hornedbeasts.horns}
           />
         ))}
       </div>
